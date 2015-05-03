@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="IOS7_Loction_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-Bq-J1z" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIk-V3-qB9" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SIk-V3-qB9" secondAttribute="trailing" id="0vx-pf-UNf"/>
+                                    <constraint firstAttribute="bottom" secondItem="SIk-V3-qB9" secondAttribute="bottom" id="YdP-Hb-trn"/>
+                                    <constraint firstItem="SIk-V3-qB9" firstAttribute="leading" secondItem="TXY-Bq-J1z" secondAttribute="leading" id="Yom-xU-NSb"/>
+                                    <constraint firstItem="SIk-V3-qB9" firstAttribute="top" secondItem="TXY-Bq-J1z" secondAttribute="top" id="mmD-uj-ut7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="SIk-V3-qB9"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="0vx-pf-UNf"/>
+                                        <exclude reference="YdP-Hb-trn"/>
+                                        <exclude reference="Yom-xU-NSb"/>
+                                        <exclude reference="mmD-uj-ut7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TXY-Bq-J1z" secondAttribute="trailing" id="E39-ig-AlP"/>
+                            <constraint firstAttribute="bottom" secondItem="TXY-Bq-J1z" secondAttribute="bottom" id="OD0-12-FKL"/>
+                            <constraint firstItem="TXY-Bq-J1z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aTV-P4-oSg"/>
+                            <constraint firstItem="TXY-Bq-J1z" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="fOI-oX-apt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="TXY-Bq-J1z" id="Ock-xH-c92"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="401"/>
+        </scene>
+    </scenes>
+</document>
