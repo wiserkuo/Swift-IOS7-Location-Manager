@@ -12,7 +12,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     
     @IBOutlet weak var mapView: GMSMapView!
-    
+    var locationStatus : NSString = "Not Started"
     
     var location: CLLocationManager!
     override func viewDidLoad() {
@@ -23,6 +23,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         mapView.myLocationEnabled = true
         mapView.settings.myLocationButton = true
         location.startUpdatingLocation()
+        
         //println("start updating location")
     }
 
